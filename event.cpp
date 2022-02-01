@@ -1,7 +1,7 @@
 #include "event.h"
 
 event::event(int d, int m, int y, std::string n){
-    std::cout <<"constructor invoked" << std::endl;
+
     if(m>12 || m<0){
         std::cout << "Enter a month between 1 and 12" << std::endl;
     }
@@ -33,14 +33,9 @@ event::event(int d, int m, int y, std::string n){
         event::month = m;
         event::year = y;
         event::name = n;
-        }
+        } 
+
         
-    } else {
-        std::cout <<"code reached" << std::endl;
-        event::day = d;
-        event::month = m;
-        event::year = y;
-        event::name = n;
     }
     
 
@@ -56,6 +51,10 @@ int event::getMonth(){
 
 int event::getYear(){
     return event::year;
+}
+
+std::string event::getName(){
+    return event::name;
 }
 
 void event::display(){

@@ -18,6 +18,7 @@ class event{
         int getMonth();
         int getYear();
         void display();
+        std::string getName();
 
 
         
